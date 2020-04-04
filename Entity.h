@@ -20,6 +20,7 @@ class Entity {
 		void drawEntity();
 
 	private:
+		int chForSpace;
 		int spaceAlocatedX;
 		int spaceAlocatedY;
 		int x;

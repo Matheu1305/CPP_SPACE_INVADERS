@@ -14,6 +14,7 @@
 
 #include "Entity.h"
 #include "Entity.cpp"
+#include "Menu.h"
 
 using namespace std;
 
@@ -70,12 +71,20 @@ int main(){
 	int x = initX;
 	int y = initY;
 	
+	// NÃO ESTÁ A DAR
+	// Talvez seja melhor não colocar o menu numa classe
+	/*
+	Menu menu = Menu();
+	menu.showOptions();
+	*/
+	
 	// posição inicial do jogador
 	movePlayer(x, y);
 		
 	char key = getch();
     int value = key;
 	
+	// Desenhar esta entity
 	Entity e = Entity(50, 25, 2, 2, 'X');
 	e.drawEntity();
 	
@@ -102,7 +111,7 @@ int main(){
 				break;
         }
 		
-		movePlayer(x, y, oldX, oldY);	
+		movePlayer(x, y, oldX, oldY);
 		
         key = getch();
         value = key;
